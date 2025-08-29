@@ -56,4 +56,8 @@ if __name__ == "__main__":
     print("get_all_names:", um.get_all_names())
 
 
-
+    #RF5
+    um.add_user(3, "Felix")
+    um.add_user(4, "Andres")
+    um.add_user(5, "Carlos")
+    print("RF5 promedio [1,2,3,4,5]:", um.average_user_id())
