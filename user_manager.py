@@ -49,3 +49,11 @@ if __name__ == "__main__":
 
 
 
+    #RF4
+    um.add_user(1, "Ana")
+    um.add_user(2, "Bob")
+
+    print("get_all_names:", um.get_all_names())
+
+
+
