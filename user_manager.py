@@ -28,36 +28,11 @@ class UserManager:
 
 if __name__ == "__main__":
 
-    #RF1
-    user_manager=UserManager()
-    for i in range(500):
-        user_manager.add_user(i,f"Yo soy el num:{i}" )
+    
+    #RF1 No Funcional
+    um1 = UserManager()
+for i in range(1000):
+    um1.add_user(i, f"User{i}")
+print("Total de usuarios:", len(um1.users))
 
-    #RF2
-    um = UserManager()
-    um.add_user(1, "Ana")
-
-    print("RF2 existente:", um.find_user(1))
-
-    print("RF2 inexistente:", um.find_user(999))  
-
-
-    #RF3
-    print("Antes de borrar:", um.users)
-    um.delete_user(1)
-    print("Después de borrar:", um.users)
-
-
-
-    #RF4
-    um.add_user(1, "Ana")
-    um.add_user(2, "Bob")
-
-    print("get_all_names:", um.get_all_names())
-
-
-    #RF5
-    um.add_user(3, "Felix")
-    um.add_user(4, "Andres")
-    um.add_user(5, "Carlos")
-    print("RF5 promedio [1,2,3,4,5]:", um.average_user_id())
+    
