@@ -31,4 +31,14 @@ if __name__ == "__main__":
     for i in range(500):
         user_manager.add_user(i,f"Yo soy el num:{i}" )
 
-        print("end")
+        
+    print("end")
+
+    um = UserManager()
+    um.add_user(1, "Ana")
+
+    print("RF2 existente:", um.find_user(1))
+
+    print("RF2 inexistente:", um.find_user(999))  
+
+
