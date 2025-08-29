@@ -27,18 +27,25 @@ class UserManager:
 
 
 if __name__ == "__main__":
+
+    #RF1
     user_manager=UserManager()
     for i in range(500):
         user_manager.add_user(i,f"Yo soy el num:{i}" )
 
-        
-    print("end")
-
+    #RF2
     um = UserManager()
     um.add_user(1, "Ana")
 
     print("RF2 existente:", um.find_user(1))
 
     print("RF2 inexistente:", um.find_user(999))  
+
+
+    #RF3
+    print("Antes de borrar:", um.users)
+    um.delete_user(1)
+    print("Después de borrar:", um.users)
+
 
 
