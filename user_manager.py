@@ -28,22 +28,15 @@ class UserManager:
 
 if __name__ == "__main__":
 
-    
-    #RNF2 No Funcional
 
+    # RNF3
     um = UserManager()
-for i in range(1000):
-    um.add_user(i, f"User{i}")
+um.add_user(10, "Ana")
+um.add_user(10, "Luis")  # Duplicado
 
-t0 = time.perf_counter()
-_ = um.find_user(500)
-t1 = time.perf_counter()
-elapsed = t1 - t0
+print("\nUsuarios después de agregar duplicados:", um.users)
 
-print("RNF2 tiempo búsqueda id=500 con 1000 usuarios:", elapsed, "segundos")
-if elapsed < 0.01:
-    print("Resultado: OK")
-else:
-    print("Resultado: Fail")
+print("find_user(10):", um.find_user(10)) 
 
-    
+um.delete_user(10) 
+print("Usuarios después de delete_user(10):", um.users) 
