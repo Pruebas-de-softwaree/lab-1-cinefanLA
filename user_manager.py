@@ -29,10 +29,21 @@ class UserManager:
 if __name__ == "__main__":
 
     
-    #RF1 No Funcional
-    um1 = UserManager()
+    #RNF2 No Funcional
+
+    um = UserManager()
 for i in range(1000):
-    um1.add_user(i, f"User{i}")
-print("Total de usuarios:", len(um1.users))
+    um.add_user(i, f"User{i}")
+
+t0 = time.perf_counter()
+_ = um.find_user(500)
+t1 = time.perf_counter()
+elapsed = t1 - t0
+
+print("RNF2 tiempo búsqueda id=500 con 1000 usuarios:", elapsed, "segundos")
+if elapsed < 0.01:
+    print("Resultado: OK")
+else:
+    print("Resultado: Fail")
 
     
